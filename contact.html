@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content= "Balady, Land Allocation, Land">
+        <title>HexPlot</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <div>
+        <div class="main-contacts">
+            <div class="navbar">
+                <div class="icon">
+                    <img class= "logo" src="images/white.png" alt="HexPlot Logo">
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <input class="srch" type="search" name="" placeholder="Type to Search..">
+                    <a href="#"> <button class="btn">Search</button></a>
+                </div>
+            </div>
+                <div class="content">
+                    <h1>Contact Us Here!</h1>
+                    <p class="par">Feel free to reach out about any of your concerns or queries.</p>
+                </div>
+
+                <div class="contact-container">
+                    <form action="" method="POST" class="contact-left">
+                        <div class="contact-left-title">
+                            <h2>Contact Form</h2>
+                            <hr>
+                        </div>
+                            <input type="text" name="name" placeholder="Name" class="contact-inputs" required><br><br>
+                            <input type="email" name="email" placeholder="Email" class="contact-inputs" required> <br><br>
+                            <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea> <br><br>
+                            <button type="submit" class="submit">Send <i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                
+                    <div class="contact-right">
+                        <img src="images/dg.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.querySelector('.contact-left').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevents the form from actually submitting
+                alert('Thank you!');
+            });
+        </script>
+        
+    </body>
+</html>
