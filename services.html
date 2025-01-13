@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content= "Balady, Land Allocation, Land">
+        <title>HexPlot</title>
+        <meta name="description" content="Land Allocation Acceptance Now!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main-services">
+            <div class="navbar">
+                <div class="icon">
+                    <img class= "logo" src="white.png" alt="HexPlot Logo">
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="services.html">SERVICES</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="search">
+                    <input class="srch" type="search" name="" placeholder="Type to Search..">
+                    <a href="#"> <button class="btn">Search</button></a>
+                </div>
+            </div>
+
+        <div class="grid-container">
+            <div>
+                <h2>Issuance of Land Allocation Decision</h2>
+
+                <button class="s-btn" onclick="focusFirstInput()">Start Service</button>
+                <button class="s-btn">Track</button>
+            </div>
+
+            <div>
+                <h2>Requirements</h2>
+
+            <ul>
+                <li> Electronic Deed</li>
+                <li>Engineering Contract</li>
+                <li>Design Idea</li>
+                <li>Soil Study</li>
+                <li>Hydrological Study</li>
+            </ul>
+
+            <form action="" method="post" class="data" onsubmit="showProcessingMessage(event)">
+                    <label for="SPECIFICATION/CLASSIFICATION OF SOIL">Specification</label>
+                    <input type="number" id="SPECIFICATION/CLASSIFICATION OF SOIL" name="SPECIFICATION/CLASSIFICATION OF SOIL" class="inputs" min="1" max="7">
+
+                    <label for="MOISTURE CONTENT">Moisture Content</label>
+                    <input type="number" id="MOISTURE CONTENT" name="MOISTURE CONTENT" class="inputs" min="5" max="50">
+
+                    <label for="WATER CONTENT %">Water Content</label>
+                    <input type="number" id="WATER CONTENT %" name="WATER CONTENT %" class="inputs" min="1" max="50"><br>
+
+                    <label for="SOIL LAYER TYPE">Soil Layer Type</label>
+                    <input type="number" id="SOIL LAYER TYPE" name="SOIL LAYER TYPE" class="inputs" min="1" max="6">
+
+                    <label for="FOUNDATION DEPTH">Foundation Depth</label>
+                    <input type="number" id="FOUNDATION DEPTH" name="FOUNDATION DEPTH" class="inputs" min="1" max="2">
+
+                    <label for="DRILLING RANGE">Drilling Range</label>
+                    <input type="number" id="DRILLING RANGE" name="DRILLING RANGE" class="inputs" min="1" max="50"><br>
+
+                    <label for="GROUND WATER LEVEL">Ground Water Level</label>
+                    <input type="number" id="GROUND WATER LEVEL" name="GROUND WATER LEVEL" class="inputs" min="1" max="50">
+
+                    <label for="SITE CLASSIFICATION">Site Classification</label>
+                    <input type="number" id="SITE CLASSIFICATION" name="SITE CLASSIFICATION" class="inputs" min="1" max="6">
+
+                    <label for="SAMPLE (SOIL)">Soil Sample</label>
+                    <input type="number" id="SAMPLE (SOIL)" name="SAMPLE (SOIL)" class="inputs" min="1" max="2"><br>
+
+                    <label for="BASIN NAME">Basin Name</label>
+                    <input type="number" id="BASIN NAME" name="BASIN NAME" class="inputs" min="1" max="5">
+
+                    <label for="DEPTH OF DRAINAGE">Depth of Drainage</label>
+                    <input type="number" id="DEPTH OF DRAINAGE" name="DEPTH OF DRAINAGE" class="inputs" min="1" max="800"><br>
+
+                    <label for="TOTAL VOLUME MILLION M^3">Total Volume (M^3)</label>
+                    <input type="number" id="TOTAL VOLUME MILLION M^3" name="TOTAL VOLUME MILLION M^3"  class="inputs" min="50" max="200">
+
+                    <label for="AVERAGE DEPTH OF VALLEYS M">Average Depth of Valley (M)</label>
+                    <input type="number" id="AVERAGE DEPTH OF VALLEYS M" name="AVERAGE DEPTH OF VALLEYS M" class="inputs" min="1" max="800">
+                
+                <br><br><br><br><br><br><br><br><br><br>
+                <button type="submit" class="submit">Send <i class="fa-solid fa-arrow-right" class=""></i></button>
+            </form>
+
+            <div id="message" style="margin-top: 10px; color: white; font-weight: bold; font-family: 'Times New Roman', Times, serif;"></div>
+
+            </div>
+            <div>
+                <h2>Description</h2>
+
+                <p>We propose an AI-driven approval system designed to reduce layout approval times from 60 days to ideally one day. <br>
+                    The system will automate document verification, soil study, hydrological study, design, and compliance checks, Image analysis and layout analysis using advanced machine learning and natural language processing. <br>
+                    By integrating with government systems like Balady, the AI model will streamline the process, flag issues instantly, and ensure regulatory compliance.</p>
+            </div>
+        </div>
+
+        <script>
+            function focusFirstInput() {
+                const firstInput = document.querySelector('.data input');
+                if (firstInput) firstInput.focus();
+            }
+            
+        </script>
+        <script>
+            function showProcessingMessage(event) {
+        event.preventDefault(); // Prevents the form from actually submitting
+        const messageDiv = document.getElementById("message");
+        messageDiv.textContent = "Processing successfully...";
+        messageDiv.style.display = "block";
+
+        // Optional: Simulate a delay before clearing the message
+        setTimeout(() => {
+            messageDiv.textContent = ""; // Clears the message after 3 seconds
+        }, 3000);
+    }
+        </script>
+    </body>
+</html>
